@@ -11,21 +11,22 @@ int main() {
     vector<string> fruits{
             "melon", "strawberry", "raspberry", "apple", "banana", "walnut", "lemon"
     };
+    cout << "\tFruits: ";
     for_each(fruits.begin(), fruits.end(), [](string fruit) {
         cout << fruit << " ";
     });
     cout << endl;
     string searchString;
-    cout << "Enter a string to search: ";
+    cout << "\tEnter a string to search: ";
     cin >> searchString;
     auto found = find_if(fruits.begin(), fruits.end(), [searchString](const string &fruit) {
         return fruit.find(searchString) != string::npos;
     });
 
     if (found != fruits.end()) {
-        cout << "Found: " << *found << endl;
+        cout << "\tFound: " << *found << endl;
     } else {
-        cout << "Not found" << endl;
+        cout << "\tNot found" << endl;
     }
 
     //2.
@@ -119,14 +120,78 @@ int main() {
     //7.
     cout << endl << "Exercise 7: " << endl;
     vector<double> numbers3{
-            2.2, 4.7, 6.8, 8.5, 10.1, 11.2
+            2.2, 10.7, 3.8, 8.5, 10.1, 11.2
     };
     cout << "\tNumbers before sorting by abs value: ";
     for (double &n: numbers3) {
         cout << n << " ";
     }
-    sort(numbers3.begin(), numbers.end(), [](double a, double b){
+    cout << endl;
+    sort(numbers3.begin(), numbers3.end(), [](double a, double b){
         return abs(a) < abs(b);
     });
+    cout << "\tNumbers after sorting by abs value: ";
+    for (double &n: numbers3) {
+        cout << n << " ";
+    }
+    cout<<endl;
+
+    //8.
+    cout << "Exercise 8: " << endl;
+    cout << "\tMonths before sorting: ";
+    for (auto &month: months) {
+        cout << month << " ";
+    }
+    cout << endl;
+
+    for_each(months.begin(), months.end(), [](string &month) {
+        transform(month.begin(), month.end(), month.begin(), ::tolower);
+    });
+
+    cout << "\tMonths after sorting: ";
+    for (auto &month: months) {
+        cout << month << " ";
+    }
+    cout << endl;
+
+    //9.
+    cout << "Exercise 9: " << endl;
+    vector<char> alphabet;
+    for (char i = 'a'; i <= 'z'; ++i) {
+        alphabet.push_back(i);
+    }
+    cout << "\tAlphabet: ";
+    for (char &c: alphabet) {
+        cout << c << " ";
+    }
+    cout << endl;
+    random_shuffle(alphabet.begin(), alphabet.end());
+    cout << "\tAlphabet after shuffle: ";
+    for (char &c: alphabet) {
+        cout << c << " ";
+    }
+    cout << endl;
+
+    cout << "\tMonths before sorting: ";
+    for (auto &month: months) {
+        cout << month << " ";
+    }
+    cout << endl;
+
+    sort(months.begin(), months.end(), [&alphabet](string a, string b){
+        for (int i = 0; i < a.size(); ++i) {
+            if(a[i] != b[i]){
+                return find(alphabet.begin(), alphabet.end(), a[i]) < find(alphabet.begin(), alphabet.end(), b[i]);
+            }
+        }
+        return false;
+    });
+
+    cout << "\tMonths after sorting: ";
+    for (auto &month: months) {
+        cout << month << " ";
+    }
+    cout << endl;
+
     return 0;
 }
