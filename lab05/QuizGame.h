@@ -7,15 +7,21 @@
 
 
 #include "Quiz.h"
+#include "User.h"
 
 class QuizGame {
 private:
-    Quiz quiz;
-    int playerScore;
-public:
-    QuizGame(const Quiz &quiz, int start) : quiz(quiz), playerScore(0) {}
+    User& user;
+    const Quiz& quiz;
+    double score = 0;
 
+public:
+    QuizGame(User& user, const Quiz& quiz) : user(user), quiz(quiz){}
     void playGame();
+    double getScore() const { return score; }
+    User getUser() const { return user; }
+    Quiz getQuiz() const { return quiz; }
+
 };
 
 

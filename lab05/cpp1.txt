@@ -1,0 +1,30 @@
+Q Melyik kulcsszóval történik a dinamikus memóriakezelés a C++ nyelvben?
+A malloc
+A new
+A allocate
+A create
+2
+Q Melyik az alapértelmezett értékadási operátor a C++-ban?
+A :=
+A ==
+A =
+A ===
+3
+Q Mit jelent az STL a C++ nyelvben?
+A Simple Template Library
+A Standard Type Library
+A Simple Type Library
+A Standard Template Library
+4
+Q Mi a nullptr a C++ 11-ben?
+A Egy speciális karakterlánc
+A Egy null értékű pointer
+A Egy típusdefiníció
+A Egy referenciaváltozó
+2
+Q Melyik függvény hívódik meg egy objektum létrehozásakor a C++-ban?
+A init()
+A construct()
+A new()
+A constructor()
+4

@@ -65,7 +65,7 @@ void Quiz::readQuestion(const string &filename) {
                 answers.clear();
                 break;
             case 'A':
-                answers.push_back(Answer(line.substr(2)));
+                answers.emplace_back(removeAccents(line.substr(2)));
                 break;
             default:
                 istringstream iss(line);
