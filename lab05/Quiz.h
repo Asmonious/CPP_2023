@@ -18,9 +18,9 @@ private:
     vector<Question> questions;
     void readQuestion(const string &filename);
 public:
-    Quiz(const string &name, const string &filename){
+    Quiz(const string &name){
         this->name = name;
-        readQuestion(filename);
+        readQuestion(name + ".txt");
     }
     string getName() const {
         return name;

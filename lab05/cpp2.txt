@@ -1,0 +1,30 @@
+Q Mi a létjogosultsága az öröklődésnek (inheritance) a C++ nyelvben?
+A Az adatbázis-kezelés optimalizálása
+A Az új típusok definiálása
+A A kód újrafelhasználhatóságának növelése
+A A futási idő optimalizálása
+3
+Q Melyik kulcsszóval érhető el a polimorfizmus a C++-ban?
+A virtual
+A polymorphic
+A poly
+A override
+1
+Q Mire való a C++ osztályokban a private hozzáférési módosító?
+A Csak az osztályon belül érhető el
+A Csak az osztály leszármazottaiban érhető el
+A Mindenki számára elérhető
+A Csak a barátosztályokból érhető el
+1
+Q Melyik operátort használjuk az objektumok összehasonlítására a C++-ban?
+A =
+A ==
+A ===
+A is
+2
+Q Mit jelent a C++ osztályokban a static tag?
+A Az objektumok példányváltozója
+A Az osztály példányváltozója
+A Az objektumok példányfüggvénye
+A Az osztály példányfüggvénye
+2

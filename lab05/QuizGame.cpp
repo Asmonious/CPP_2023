@@ -24,7 +24,7 @@ void QuizGame::playGame() {
         } else {
             if (quiz.getQuestion(i).getAnswers()[userAnswer - 1].getCorrect()) {
                 cout << "This is correct!\n" << endl;
-                playerScore++;
+                score++;
             } else {
                 cout << "Incorrect!" <<endl <<" The correct answer is: ";
                 for (int j = 0; j < quiz.getQuestion(i).getAnswers().size(); ++j) {
@@ -37,5 +37,6 @@ void QuizGame::playGame() {
         }
     }
 
-    cout << "Quiz completed. YOUR SCORE: " << playerScore << "/" << quiz.getNumQuestions() << endl;
+    cout << "Quiz completed. YOUR SCORE: " << score << "/" << quiz.getNumQuestions() << endl;
+    user.addScore(quiz.getName(), score);
 }
