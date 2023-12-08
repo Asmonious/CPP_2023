@@ -15,23 +15,22 @@ void Manager::addAlkalmazott(Alkalmazott *beosztott) {
 
 }
 
-void Manager::deleteAlkalmazott(Alkalmazott *beosztott) {
-    auto found =  find(beosztottak.begin(), beosztottak.end(), beosztott);
+void Manager::deleteAlkalmazott(int id) {
+    auto found = find_if(beosztottak.begin(), beosztottak.end(),
+                         [id](const Alkalmazott *beosztott) { return beosztott->getId() == id; });
+
     if (found != beosztottak.end()) {
         beosztottak.erase(found);
     }
-
-
 }
+
 
 int Manager::beosztottakSzama() const {
     return beosztottak.size();
 }
 
 void Manager::print(ostream &os) const {
-    os << "\nManager: " << endl;
-    Alkalmazott::print(os);
-    os << "\nBeosztottak: " << endl;
+    os << "Manager: " << getId() << " " << getVezetekNev() << " " << getKeresztNev() << " " << getMunkakor() << endl;
     for(auto& beosztott : beosztottak) {
         os << "\t";
         beosztott->print(os);

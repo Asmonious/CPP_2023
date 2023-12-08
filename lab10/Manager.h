@@ -14,11 +14,11 @@ private:
     vector<Alkalmazott *> beosztottak;
 public:
     static const string manager_munkakor;
-    Manager(string vezetekNev, string keresztNev, int szuletesiEv);
+    Manager(string vezetekNev, string keresztNev, int szuletesiEva);
 
     void addAlkalmazott(Alkalmazott *beosztott);
 
-    void deleteAlkalmazott(Alkalmazott *beosztott);
+    void deleteAlkalmazott(int id);
 
     int beosztottakSzama() const;
 

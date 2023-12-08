@@ -11,7 +11,23 @@ Alkalmazott::Alkalmazott(string vezetekNev, string keresztNev, int szuletesiEv, 
 }
 
 void Alkalmazott::print(ostream &os) const {
-    os << "\nId: " << this->id;
+    os << "Alkalmazott " << this->id << " ";
     Szemely::print(os);
-    os << " // Munkakor: " << this->munkakor << endl;
+    os << " " << this->munkakor << endl;
+}
+
+int Alkalmazott::getId() const {
+    return id;
+}
+
+string Alkalmazott::getVezetekNev() const {
+    return vezetekNev;
+}
+
+string Alkalmazott::getKeresztNev() const {
+    return keresztNev;
+}
+
+string Alkalmazott::getMunkakor() const {
+    return munkakor;
 }

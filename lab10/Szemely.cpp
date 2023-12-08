@@ -11,8 +11,8 @@ Szemely::Szemely(string vezetekNev, string keresztNev, int szuletesiEv) {
 }
 
 void Szemely::print(ostream &os) const {
-    os << "\n Vezeteknev: " << this->vezetekNev << " // ";
-    os << "Keresztnev: " << this->keresztNev << " // ";
+    os << "Vezeteknev: " << this->vezetekNev << " ";
+    os << "Keresztnev: " << this->keresztNev << " ";
     os << "Szuletesi ev: " << this->szuletesiEv;
 }
 

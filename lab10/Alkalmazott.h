@@ -19,6 +19,10 @@ public:
 
     virtual void print(ostream &os) const override;
 
+    int getId() const;
+    string getVezetekNev() const;
+    string getKeresztNev() const;
+    string getMunkakor() const;
 };
 
 
