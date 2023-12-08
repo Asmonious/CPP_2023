@@ -33,8 +33,8 @@ void Student::addGrade(const string &subject, double grade) {
     }
 }
 
-double Student::getGrade(const string &subject) {
-    return this->grades[subject];
+double Student::getGrade(const string &subject) const {
+    return this->grades.at(subject);
 }
 
 const map<string, double> &Student::getGrades() const {

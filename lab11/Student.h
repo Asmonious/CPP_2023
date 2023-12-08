@@ -25,7 +25,7 @@ public:
     const string &getLastName() const;
     void addGrade(const string& subject, double grade);
 // throws out_of_range exception for nonexistent subject
-    double getGrade(const string& subject);
+    double getGrade(const string& subject) const;
     const map<string, double> &getGrades() const;
     void computeAverage();
     double getAverage() const;

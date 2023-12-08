@@ -15,7 +15,7 @@ class GraduationDao {
     map<int, Student> students;
 public:
     explicit GraduationDao(int year) : year(year) {} //explicit azt jelenti hogy mikor letrehozzuk csak igy lehet
-    // -> GraduationDao dao1(1990) egy ertekesel csak
+    // -> GraduationDao dao1(1990) egy ertekessel csak
     void enrollStudents(const string &filename);
     void saveGradesForSubject(const string &subject, const string &filename);
     void computeAverage();
